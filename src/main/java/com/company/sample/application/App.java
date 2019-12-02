@@ -17,18 +17,24 @@
  */
 package com.company.sample.application;
 
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
+import software.amazon.codeguruprofilerjavaagent.Profiler;
+
 public class App {
 
     public static void main(String[] args) {
+        // start the profiler
+        Profiler.builder().profilingGroupName("<insert the profiling group name here>")
+            .awsCredentialsProvider(DefaultCredentialsProvider.create())
+            .build()
+            .start();
+
         App app = new App();
 
         while(true){
             app.load();
-            System.out.println("load finish");
             app.load1();
-            System.out.println("load1 finish");
             app.load2();
-            System.out.println("load2 finish");
         }
     }
 

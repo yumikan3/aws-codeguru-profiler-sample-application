@@ -5,16 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.amazon.SampleApplication</groupId>
-    <artifactId>sample</artifactId>
+    <artifactId>example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>sample</name>
+    <name>example</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <repositories>
+        <!-- codeguru-profiler repo to fetch profiler agent, more details: https://d1osg35nybn3tt.cloudfront.net/ -->
+        <repository>
+            <id>codeguru-profiler</id>
+            <name>codeguru-profiler</name>
+            <url>https://d1osg35nybn3tt.cloudfront.net</url>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -32,8 +41,20 @@
     <dependencies>
         <dependency>
             <groupId>com.amazonaws</groupId>
+            <artifactId>codeguru-profiler-java-agent</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
             <version>1.11.543</version>
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>auth</artifactId>
+            <version>2.9.17</version>
         </dependency>
 
         <dependency>
