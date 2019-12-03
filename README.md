@@ -2,10 +2,6 @@
 This package contains a simple Sales System application that creates and lists the orders created by the customers.
 
 ## Before you begin
-### Prerequisites
-* Install Maven using instructions [here](http://maven.apache.org/)
-* Install Java using instructions [here](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/setup-install.html#java-dg-java-env)
-
 ### Create Profiling Group
 * Go to the CodeGuru Profiler [console](https://console.aws.amazon.com/codeguru/profiler/)
 * Click “Create Profiling Group”
@@ -16,9 +12,14 @@ This package contains a simple Sales System application that creates and lists t
 ## Create an EC2 instance to run this application on AWS
 * [Create](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) a EC2 instance
 * [Connect](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html) to your instance
-* git clone https://github.com/aws-samples/aws-codeguru-profiler-sample-application.git
+
+### Prerequisites
+* Install Maven using instructions [here](http://maven.apache.org/)
+* Install Java using instructions [here](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/setup-install.html#java-dg-java-env)
+* Install git using instructions [here](https://git-scm.com/downloads)
 
 ## Integrate the application with the CodeGuru Profiler
+* git clone https://github.com/aws-samples/aws-codeguru-profiler-sample-application.git
 * Navigate to the root directory `cd aws-codeguru-profiler-sample-application`
 * Change the line number 36 (shown below) on file `src/main/java/com/company/sample/application/SalesSystem.java` to submit profiling data the profiling group just created.
     ```
